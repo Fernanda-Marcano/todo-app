@@ -16,7 +16,7 @@ def crear_tarea(request):
         context = {
             'form':form,
         }
-        return HttpResponse('Funciona el GET')
+        return render(request, 'tarea/crear_tarea.html', context)
 
 
 def lista_tarea(request):
@@ -24,7 +24,7 @@ def lista_tarea(request):
     context = {
         'form':form,
     }
-    return HttpResponse('Funcionan las listas')
+    return render(request, 'tarea/lista_tarea.html', context)
 
 
 def editar_tarea(request, id):
@@ -40,7 +40,7 @@ def editar_tarea(request, id):
             'form':form, 
             'id_tarea':id_tarea,
         }
-        return HttpResponse('Funciona la edicion')
+        return render(request, 'tarea/editar_tarea.html', context)
 
 
 def eliminar_tarea(request, id):
