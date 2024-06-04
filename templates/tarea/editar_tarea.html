@@ -4,4 +4,8 @@
 
 {% block content %}
     <h1>Editar</h1>
+    <form action="{% url 'editar-tarea' id_tarea.id %}" method="POST">
+        {% csrf_token %}
+        {% include 'tarea/forms.html' %}
+    </form>
 {% endblock %}
