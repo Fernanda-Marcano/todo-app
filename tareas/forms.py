@@ -1,5 +1,5 @@
 from django import forms
-from django.forms import TextInput
+from django.forms import TextInput, DateInput
 from .models import Tarea
 
 class TareaForm(forms.ModelForm):
@@ -16,5 +16,6 @@ class TareaForm(forms.ModelForm):
             'titulo':'Este campo no debe estar vacío'
         } """
         widgets = {
-            'prioridad':TextInput(attrs={'type':'number', "min":1, 'max':7},)
+            'prioridad':TextInput(attrs={'type':'number', "min":1, 'max':7}),
+            'fecha_final':DateInput(format=('%Y-%m-%d'), attrs=({'type':'date'}))
         }

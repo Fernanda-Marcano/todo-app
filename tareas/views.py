@@ -9,6 +9,7 @@ def crear_tarea(request):
         form = TareaForm(request.POST or None)
         if form.is_valid():
             form.save()
+            return redirect(to='lista-tarea')
         else:
             return HttpResponse('Error al crear la tarea')
     else:
@@ -32,6 +33,7 @@ def editar_tarea(request, id):
     form = TareaForm(request.POST or None, instance=id_tarea)
     if form.is_valid():
         form.save()
+        return redirect(to='lista-tarea')
     else:
         HttpResponse('Error')
     if request.method == 'GET':

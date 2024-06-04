@@ -1,3 +1,21 @@
-<form action="" method="POST">
-    
-</form>
+<div>
+    {% for campo in form %}
+        <label for="">{{ campo.label }}</label>
+        <input type="{{ campo.field.widget.input_type }}" 
+        placeholder="{{ campo.help_text }}"
+        class=""
+        name="{{ campo.name }}"
+
+        {% if tarea %}
+            {% if campo.name == 'titulo' %} value="{{ campo.titulo }}" {% endif %}
+            {% if campo.name == 'descripcion' %} value="{{ campo.descripcion }}" {% endif %}
+            {% if campo.name == 'prioridad' %} value="{{ campo.prioridad }}" {% endif %}
+            {% if campo.name == 'fecha_final' %} value="{{ campo.fecha_final }}" {% endif %}
+        {% else %}
+            {% if campo.initial is not None %}
+                value="{{ campo.initial }}"
+            {% endif %}
+        {% endif %}>
+    {% endfor %}
+    <input type="submit" value="Crear Tarea">
+</div>

@@ -4,5 +4,11 @@
 
 {% block content %} 
     <h1>Hola Mundo</h1>
+
+    <form action="{% url 'crear-tarea' %}" method="POST">
+        {% csrf_token %}
+        {% include 'tarea/forms.html' %}
+    </form>
+
 {% endblock %}
 
