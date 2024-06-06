@@ -1,5 +1,5 @@
 .navbar {
-    background: rgb(80, 80, 80);
+    background: #00f7;
     padding: 5px;
 }
 
@@ -14,13 +14,14 @@
 }
 
 .navbar_ul_li a {
-    color: rgb(200, 200, 200);
+    color: #eee;
     text-decoration: none;
+    text-shadow: 0 0 10px #00fa;
     font-size: 1.1em;
     letter-spacing: 1px;
 }
 
 .navbar_ul_li a:hover {
-    color: rgb(255, 50, 255);
+    color: #eeea;
     text-decoration: underline;
 }
