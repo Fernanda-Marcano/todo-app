@@ -6,5 +6,6 @@ class TareaAdmin(admin.ModelAdmin):
     list_display = ('titulo', 'descripcion', 'fecha_inicial', 'prioridad')
     list_filter = ('titulo', 'prioridad', 'fecha_inicial')
     date_hierarchy = 'fecha_inicial'
+    
 admin.site.register(Tarea, TareaAdmin)
 

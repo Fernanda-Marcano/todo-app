@@ -23,7 +23,7 @@ def crear_tarea(request):
 def lista_tarea(request):
     form = Tarea.objects.all()
     context = {
-        'form':form,
+        'forms':form,
     }
     return render(request, 'tarea/lista_tarea.html', context)
 
