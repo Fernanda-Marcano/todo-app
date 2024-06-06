@@ -3,12 +3,23 @@
 {% block title %} Lista Tareas {% endblock %}
 
 {% block content %}
-    <h1>Lista</h1>
-    <div class="lista">
-        {% if tarea %}
+<div class="lista">
+    <h2 class="lista_titulo">Tareas</h2>
+    {% load static %}
+        {% if forms %}
             <ul class="lista_ul">
-                {% for campo in forms %}
-                    <li class="lista_ul_li">{{ campo.titulo }}</li>
+                {% for valor in forms %}
+                    <li class="lista_ul_li">
+                        {{ valor.titulo }}
+                        <div class="lista_boton">
+                            <a href="{% url 'editar-tarea' valor.id %}" class="edit" title="Editar (tarea: {{ valor.id }})">
+                                <img src="{% static 'img/pencil-square.svg' %}" alt=""></a>
+                            <a href="{% url 'eliminar-tarea' valor.id %}" class="del" title="Eliminar (tarea: {{ valor.id }})">
+                                <img src="{% static 'img/trash.svg' %}" alt="">
+                            </a>
+                        </div>
+                        
+                    </li>
                 {% endfor %}
             </ul>
         {% else %}
