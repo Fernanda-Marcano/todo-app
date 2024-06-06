@@ -3,9 +3,9 @@
 {% block title %} Crear Tarea {% endblock %}
 
 {% block content %} 
-    <h1>Hola Mundo</h1>
 
-    <form action="{% url 'crear-tarea' %}" method="POST">
+    <form action="{% url 'crear-tarea' %}" method="POST" class="formulario">
+        <h2 class="titulo">crear tarea</h2>
         {% csrf_token %}
         {% include 'tarea/forms.html' %}
     </form>

@@ -1,0 +1,27 @@
+.navbar {
+    background: #00f7;
+    padding: 5px;
+}
+
+.navbar_ul {
+    display: flex;
+    justify-content: center;
+}
+
+.navbar_ul_li {
+    list-style: none;
+    margin: 0 10px;
+}
+
+.navbar_ul_li a {
+    color: #eee;
+    text-decoration: none;
+    text-shadow: 0 0 10px #00fa;
+    font-size: 1.1em;
+    letter-spacing: 1px;
+}
+
+.navbar_ul_li a:hover {
+    color: #eeea;
+    text-decoration: underline;
+}
