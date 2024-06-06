@@ -1,9 +1,13 @@
-<div>
+<div class="div_input">
     {% for campo in form %}
-        <label for="">{{ campo.label }}</label>
+        <!-- <label for="">{{ campo.label }}</label> -->
         <input type="{{ campo.field.widget.input_type }}" 
         placeholder="{{ campo.help_text }}"
+<<<<<<< HEAD
         class="formulario_input"
+=======
+        class="formulario_input input"
+>>>>>>> styles
         name="{{ campo.name }}"
 
         {% if tarea %}
@@ -17,5 +21,5 @@
             {% endif %}
         {% endif %}>
     {% endfor %}
-    <input type="submit" value="Crear Tarea">
+    <input type="submit" value="Crear Tarea" class="formulario_input boton">
 </div>

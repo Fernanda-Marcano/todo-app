@@ -3,8 +3,8 @@
 {% block title %} Editar Tarea {% endblock %}
 
 {% block content %}
-    <h1>Editar</h1>
-    <form action="{% url 'editar-tarea' id_tarea.id %}" method="POST">
+    <form action="{% url 'editar-tarea' id_tarea.id %}" method="POST" class="formulario">
+        <h2 class="titulo">edita tarea</h2>
         {% csrf_token %}
         {% include 'tarea/forms.html' %}
     </form>

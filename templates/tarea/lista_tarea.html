@@ -4,4 +4,15 @@
 
 {% block content %}
     <h1>Lista</h1>
+    <div class="lista">
+        {% if tarea %}
+            <ul class="lista_ul">
+                {% for campo in forms %}
+                    <li class="lista_ul_li">{{ campo.titulo }}</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <h3>No hay tareas registradas</h3>
+        {% endif %}
+    </div>
 {% endblock %}
