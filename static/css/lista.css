@@ -10,8 +10,8 @@
 }
 
 .lista_titulo {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 2em;
+    text-transform: uppercase;
     margin-left: 20px;
     padding-top: 10px;
     color: #eee;
@@ -45,6 +45,11 @@
 
 .edit {
     background-color: #fb0d;
+    padding: 5px;
+}
+
+.detalle {
+    background-color: #0f0d;
     padding: 5px;
 }
 

@@ -12,9 +12,11 @@
                     <li class="lista_ul_li">
                         {{ valor.titulo }}
                         <div class="lista_boton">
+                            <a href="{% url 'detalle-tarea' valor.id %}" class="detalle" title="Información (tarea: {{ valor.id }})">
+                                <img src="{% static 'img/eye.svg' %}" alt=""></a>
                             <a href="{% url 'editar-tarea' valor.id %}" class="edit" title="Editar (tarea: {{ valor.id }})">
                                 <img src="{% static 'img/pencil-square.svg' %}" alt=""></a>
-                            <a href="{% url 'eliminar-tarea' valor.id %}" class="del" title="Eliminar (tarea: {{ valor.id }})">
+                            <a href="{% url 'eliminar-tarea' valor.id %}" class="del" title="Eliminar (tarea: {{ valor.id }})" onclick="return confirm('¿Seguro desea eliminar ({{ valor.id }})')">
                                 <img src="{% static 'img/trash.svg' %}" alt="">
                             </a>
                         </div>

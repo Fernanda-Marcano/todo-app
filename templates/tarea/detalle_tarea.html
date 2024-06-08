@@ -1,0 +1,15 @@
+{% extends '../layouts/base.html' %}
+
+{% block title %} Información {% endblock %}
+
+{% block content %}
+    <div class="card">
+        <h2 class="card_titulo">Información tarea #{{ id_tarea.id }}</h2>
+        <div class="card_bloque">
+            <h4 class="card_subtitulo">Título: <span>{{ id_tarea.titulo }}</span></h4>
+            <h4 class="card_subtitulo">Descripción: <span>{{ id_tarea.descripcion }}</span></h4>
+            <h4 class="card_subtitulo">Fecha de inicio: <span>{{ id_tarea.fecha_inicial }}</span></h4>
+            <h4 class="card_subtitulo">Fecha límite: <span>{{ id_tarea.fecha_final }}</span></h4>
+        </div>
+    </div>
+{% endblock %}
