@@ -16,7 +16,7 @@
                                 <img src="{% static 'img/eye.svg' %}" alt=""></a>
                             <a href="{% url 'editar-tarea' valor.id %}" class="edit" title="Editar (tarea: {{ valor.id }})">
                                 <img src="{% static 'img/pencil-square.svg' %}" alt=""></a>
-                            <a href="{% url 'eliminar-tarea' valor.id %}" class="del" title="Eliminar (tarea: {{ valor.id }})" onclick="return confirm('¿Seguro desea eliminar ({{ valor.id }})')">
+                            <a href="{% url 'eliminar-tarea' valor.id %}" class="del" title="Eliminar (tarea: {{ valor.id }})" onclick="return confirm('¿Seguro desea eliminar la tarea #({{ valor.id }})?')">
                                 <img src="{% static 'img/trash.svg' %}" alt="">
                             </a>
                         </div>
